@@ -1,0 +1,519 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap');
+
+/* CONFIGURAÇÕES GERAIS */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body,html{
+    max-width: 100%;
+    font-family: Barlow, 'sans-serif';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    height: 100vh;
+    width: 100vw;
+    scroll-behavior: smooth;
+}
+
+h2{
+    font-size: 56px;
+    color: white; 
+}
+
+p{
+    font-size: 30px;
+    color: #dfe3ee;
+    line-height: 1.5;
+    margin: 30px 0;
+    max-width: 600px;
+}
+
+.waves{
+    height: 110px;
+    width: 100%;
+    background-image: url('../img/wave.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+
+.areia{
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    background-image: url('../img/areia.svg');
+    background-size: cover;
+    background-position: bottom center;
+}
+
+::-webkit-scrollbar{
+    width: 20px;
+    background: #3b5998;
+}
+
+::-webkit-scrollbar-thumb{
+    border: 5px solid #3b5998;
+    background: #fff;
+    border-radius: 10px;
+}
+
+/* -----------------INICIO CONTAINER------------------- */
+
+.container{
+    margin-top: 120px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* ----INICIO HEADER---- */
+header{
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 80px;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 999;
+    background: white;
+    box-shadow: none;
+    transition: all 0.5s ease-out;
+}
+
+/* inicio navbar */
+header ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    font-size: 22px;
+}
+
+header ul li, header ul li a{
+    color: #3b5998;
+    transition: all 0.2s ease-in;
+}
+
+header ul li:hover, header li a:hover{
+    transform: translateY(-3px);
+    color: #8b9dc3;
+}
+
+.hamburguer{
+    display: none;
+    width: 35px;
+    height: 35px;
+    background-image: url('../img/menu.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    border: none;
+}
+
+/* fim navbar */
+
+.logo{
+    height: 70px;
+}
+/* -----FIM HEADER----- */
+
+main{
+    width: 100%;
+    background: #3b5998;
+}
+
+/* ----INICIO SOFTWARE---- */
+#apresentacao{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    padding-bottom: 50px;
+}
+
+/* -texto de apresentação- */
+.texto{
+    width: 600px;
+}
+.texto h2{
+    margin-left: -15px;
+}
+
+.texto button{
+    margin-left: 5%;
+    height: 120px;
+    width: 360px;
+    padding: 10px;
+    border: 3px solid #8b9dc3;
+    border-radius: 15px;
+    font-size: 22px;
+    background: #8b9dc3;
+    line-height: 1.4;
+    transition: 0.4s all ease-in-out;
+    color: #3b5998;
+}
+
+.texto button:hover{
+    border: 3px solid #8b9dc3;
+    background-color: #3b5998;
+    color: #dfe3ee;
+    cursor: pointer;
+}
+
+.img-aquario{
+    height: 450px;
+    width: 450px;
+}
+/* ------FIM SOFTWARE------ */
+
+/* ------INICIO SENSORES------ */
+#sensores{
+    margin: 50px 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#sensores h3{
+    font-size: 46px;
+    color: white;
+}
+
+#sensores p{
+    margin: 10px;
+    width: 800px;
+    height: 200px;
+    font-size: 24px;
+    color: #dfe3ee;
+    text-align: justify;
+}
+
+/* inicio carrossel */
+#sensores .carrossel{
+    height: 500px;
+    width: 500px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.39) 1.95px 1.95px 3px;
+}
+
+#sensores #painel{
+    display: flex;
+}
+
+#sensores #painel img{
+    object-fit: cover;
+    height: 500px;
+    width: 100%;
+}
+/* fim carrossel */
+/* ----FIM SENSORES---- */
+
+
+/* ----INICIO SOBRE---- */
+#sobre{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+#sobre div{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: justify;
+    justify-content:space-between;
+}
+
+#sobre p{
+    line-height: 1.5;
+}
+
+#sobre a{
+    color: #dfe3ee;
+}
+
+#sobre a:hover{
+    text-decoration: underline;
+}
+
+#sobre img{
+    height: 560px;
+}
+/* ----FIM SOBRE------ */
+
+/* ------------------FIM CONTAINER------------------*/
+
+/* ----INICIO FOOTER---- */
+footer{
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    padding: 15px 0;
+}
+/* ----FIM FOOTER---- */
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1366px){    
+    /* apresentacao */
+    #apresentacao h2, #sobre h2{
+        font-size: 46px;
+    }
+
+    #apresentacao p, #sobre p{
+        font-size: 24px;
+        max-width: 500px;
+    }
+    
+    #apresentacao button{
+        width: 300px;
+        height: 100px;
+    }
+
+    #apresentacao img{
+        height: 370px;
+        width: 370px;
+    }
+
+    /* sensores */
+
+    #sensores h3{
+        font-size: 40px;
+    }
+
+    #sensores p{
+        font-size: 20px;
+        height: 130px;
+    }
+
+    #sensores .carrossel {
+        width: 350px;
+        height: 350px;
+    }
+
+    /* sobre */
+
+    #sobre{
+        padding-top: 60px;
+    }
+
+    #sobre img{
+        width: 450px;
+        height: 450px;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    /* apresentacao */
+    
+    #apresentacao{
+        justify-content: space-evenly;
+    }
+    
+    #apresentacao .texto{
+        width: 500px;
+    }
+    
+    #apresentacao h2, #sobre h2{
+        font-size: 38px;
+    }
+    
+    #apresentacao p, #sobre p{
+        font-size: 20px;
+        max-width: 400px;
+    }
+    
+    #apresentacao p{
+        margin: 15px 0;
+    }
+    
+    #apresentacao button{
+        width: 300px;
+        height: 90px;
+        font-size: 20px;
+    }
+    
+    #apresentacao img{
+        height: 300px;
+        width: 300px;
+    }
+    
+    /* sensores */
+    
+    #sensores{
+        margin: 0;
+    }
+
+    #sensores h3{
+        font-size: 32px;
+    }
+    
+    #sensores p{
+        font-size: 20px;
+        height: 130px;
+    }
+    
+    /* sobre */
+    
+    #sobre{
+        padding-top: 40px;
+    }
+    #sobre img{
+        width: 360px;
+        height: 360px;
+    }
+    #sobre a{
+        text-decoration: underline;
+    }
+}
+
+/* @media screen and (max-width: 900px){
+    /* apresentacao
+
+    #apresentacao .texto{
+        text-align: center;
+    }
+    
+    #apresentacao h2, #sobre h2{
+        font-size: 200%;
+    }
+
+    #apresentacao p, #sobre p{
+        font-size: 120%;
+        max-width: 300px;
+    }
+    
+    #apresentacao button{
+        width: 60%;
+        height: 100%;
+        font-size: 100%;
+        margin-top: 15px;
+    }
+
+    #apresentacao img{
+        display: none;
+    }
+
+    /* sensores 
+
+    #sensores{
+        height: 48%;
+        justify-content: space-evenly;
+    }
+
+    #sensores div{
+        text-align: center;
+    }
+
+    #sensores h3{
+        font-size: 200%;
+    }
+
+    #sensores p{
+        text-align: center;
+        font-size: 120%;
+        width: 300px;
+    }
+
+    #sensores .carrossel {
+        width: 65vw;
+        height: 65vw;
+    }
+
+    /* sobre 
+
+    #sobre{
+        /* padding-top: 60px; 
+        height: max-content;
+    }
+
+    #sobre img{
+        display: none;
+    }
+} */
+
+@media screen and (max-width: 900px) {
+    *{
+        text-align: center;
+    }
+    
+    #apresentacao img, #sobre img{
+        display: none;
+    }
+    
+    #apresentacao h2, #sobre h2{
+        font-size: 360%;
+    }
+
+    #apresentacao p, #sobre p{
+        font-size: 180%;
+        max-width: unset;
+    }
+
+    #apresentacao p{
+        margin: 20px 0;
+    }
+    
+    #apresentacao button{
+        width: 40vw;
+        height: 10vh;
+        font-size: 130%;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    /*---------*/
+
+    #sensores{
+        /* padding-top: 5vh; */
+        height: 80vh;
+        justify-content: space-around
+    }
+
+    #sensores div{
+        text-align: center;
+    }
+
+    #sensores h3{
+        font-size: 320%;
+    }
+
+    #sensores p{
+        text-align: center;
+        font-size: 165%;
+        line-height: 1.4;
+        width: 65vw;
+        /* height: 250px; */
+    }
+
+    #sensores div{
+        /* height: 34%; */
+    }
+
+    #sensores .carrossel {
+        width: 55vw;
+        height: 55vw;
+    }
+
+    #sobre{
+        height: 70vh;
+        justify-content: flex-start;
+    }
+}

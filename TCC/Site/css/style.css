@@ -1,0 +1,42 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+a{
+    text-decoration: none;
+    color: grey;
+}
+
+.conteiner{
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(68.15deg, #23272f 16.62%, #3b5998 85.61%);
+}
+
+header{
+    display: flex;
+    height: 100px;
+    width: 100vw;
+    border: 1px solid black;
+}
+
+header ul{
+    display: flex;
+    list-style: none;
+}
+
+.apresentacao{
+
+}
+
+h2{
+    color: rgba(255, 255, 255, 0.815);
+}
+
+p{
+    color: rgba(255, 255, 255, 0.582);
+}
