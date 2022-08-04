@@ -9,9 +9,10 @@
     text-decoration: none;
 }
 
-body,html{
+body, html{
     max-width: 100%;
-    font-family: Barlow, 'sans-serif';
+    /* font-family: Barlow, 'sans-serif'; */
+    font-family: 'Open Sans', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -23,15 +24,15 @@ body,html{
 }
 
 h2{
-    font-size: 56px;
+    font-size: 54px;
     color: white; 
 }
 
 p{
-    font-size: 30px;
+    font-size: 28px;
     color: #dfe3ee;
     line-height: 1.5;
-    margin: 30px 0;
+    margin: 10px 0 30px 0;
     max-width: 600px;
 }
 
@@ -81,7 +82,7 @@ header{
     position: fixed;
     display: flex;
     width: 100%;
-    height: 80px;
+    /* height: 80px; */
     justify-content: space-around;
     align-items: center;
     z-index: 999;
@@ -122,8 +123,9 @@ header ul li:hover, header li a:hover{
 /* fim navbar */
 
 .logo{
-    height: 70px;
+    height: 90px;
 }
+
 /* -----FIM HEADER----- */
 
 main{
@@ -133,6 +135,7 @@ main{
 
 /* ----INICIO SOFTWARE---- */
 #apresentacao{
+    margin-top: -20px;
     width: 100%;
     height: 70vh;
     display: flex;
@@ -142,9 +145,11 @@ main{
 }
 
 /* -texto de apresentação- */
+
 .texto{
     width: 600px;
 }
+
 .texto h2{
     margin-left: -15px;
 }
@@ -154,21 +159,23 @@ main{
     height: 120px;
     width: 360px;
     padding: 10px;
-    border: 3px solid #8b9dc3;
+    border: 3px solid #fff;
     border-radius: 15px;
     font-size: 22px;
-    background: #8b9dc3;
+    background: #fff;
     line-height: 1.4;
     transition: 0.4s all ease-in-out;
     color: #3b5998;
 }
 
 .texto button:hover{
-    border: 3px solid #8b9dc3;
+    border: 3px solid #fff;
     background-color: #3b5998;
-    color: #dfe3ee;
+    color: #fff;
     cursor: pointer;
 }
+
+/* fim texto de apresentação */
 
 .img-aquario{
     height: 450px;
@@ -182,23 +189,50 @@ main{
     width: 100%;
     height: 100vh;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+}
+
+#sensores .bloco{
+    width: 300px;
+    height: 70%;
+    display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+}
+
+#sensores .bloco:nth-child(2){
+    box-sizing: content-box;
+    padding: 0 6vw;
+    border-left: 1px solid #8b9dc3;
+    border-right: 1px solid #8b9dc3;
+}
+
+#sensores .bloco img{
+    object-fit: cover;
+    width: 260px;
+    height: 260px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+#sensores .bloco div{
+    margin-top: 15px;
 }
 
 #sensores h3{
-    font-size: 46px;
+    font-size: 34px;
     color: white;
 }
 
 #sensores p{
-    margin: 10px;
-    width: 800px;
-    height: 200px;
-    font-size: 24px;
-    color: #dfe3ee;
-    text-align: justify;
+    /* margin: 10px; */
+    /* width: 800px; */
+    /* height: 200px; */
+    font-size: 18px;
+    color: #dfe3ee
 }
 
 /* inicio carrossel */
@@ -216,17 +250,18 @@ main{
 
 #sensores #painel img{
     object-fit: cover;
-    height: 500px;
+    height: 100%;
     width: 100%;
 }
 /* fim carrossel */
+
 /* ----FIM SENSORES---- */
 
 
 /* ----INICIO SOBRE---- */
 #sobre{
     width: 100%;
-    height: 80vh;
+    height: 75vh;
     display: flex;
     justify-content:space-around;
     align-items: center;
@@ -293,13 +328,25 @@ footer{
     }
 
     /* sensores */
+    
+    #sensores .bloco:nth-child(2){
+        padding: 0 1vw;
+    }
+
+    #sensores .bloco img{
+        object-fit: cover;
+        width: 200px;
+        height: 200px;
+        border-radius: 10px;
+    }
 
     #sensores h3{
-        font-size: 40px;
+        font-size: 30px;
     }
 
     #sensores p{
-        font-size: 20px;
+        margin: 0;
+        font-size: 18px;
         height: 130px;
     }
 
@@ -384,71 +431,6 @@ footer{
     }
 }
 
-/* @media screen and (max-width: 900px){
-    /* apresentacao
-
-    #apresentacao .texto{
-        text-align: center;
-    }
-    
-    #apresentacao h2, #sobre h2{
-        font-size: 200%;
-    }
-
-    #apresentacao p, #sobre p{
-        font-size: 120%;
-        max-width: 300px;
-    }
-    
-    #apresentacao button{
-        width: 60%;
-        height: 100%;
-        font-size: 100%;
-        margin-top: 15px;
-    }
-
-    #apresentacao img{
-        display: none;
-    }
-
-    /* sensores 
-
-    #sensores{
-        height: 48%;
-        justify-content: space-evenly;
-    }
-
-    #sensores div{
-        text-align: center;
-    }
-
-    #sensores h3{
-        font-size: 200%;
-    }
-
-    #sensores p{
-        text-align: center;
-        font-size: 120%;
-        width: 300px;
-    }
-
-    #sensores .carrossel {
-        width: 65vw;
-        height: 65vw;
-    }
-
-    /* sobre 
-
-    #sobre{
-        /* padding-top: 60px; 
-        height: max-content;
-    }
-
-    #sobre img{
-        display: none;
-    }
-} */
-
 @media screen and (max-width: 900px) {
     *{
         text-align: center;
@@ -482,12 +464,17 @@ footer{
     /*---------*/
 
     #sensores{
-        /* padding-top: 5vh; */
-        height: 80vh;
-        justify-content: space-around
+        margin-top: 20px;
+        height: 78vh;
+        justify-content: space-between;
+        flex-direction: column;
     }
 
-    #sensores div{
+    #sensores .bloco{
+        display: none;
+    }
+
+    #sensores .texto-principal-sensores{
         text-align: center;
     }
 
@@ -500,11 +487,6 @@ footer{
         font-size: 165%;
         line-height: 1.4;
         width: 65vw;
-        /* height: 250px; */
-    }
-
-    #sensores div{
-        /* height: 34%; */
     }
 
     #sensores .carrossel {
@@ -513,7 +495,7 @@ footer{
     }
 
     #sobre{
-        height: 70vh;
-        justify-content: flex-start;
+        height: 80vh;
+        justify-content: center;
     }
 }

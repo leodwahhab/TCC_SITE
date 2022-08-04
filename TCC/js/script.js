@@ -2,8 +2,8 @@
 
 const imgs = document.getElementById("painel")
 const img = document.querySelectorAll("#painel img")
-const h3Sensor = document.querySelector("#sensores h3")
-const pSensor = document.querySelector("#sensores p")
+const h3Sensor = document.querySelector("#sensores .texto-principal-sensores h3")
+const pSensor = document.querySelector("#sensores .texto-principal-sensores p")
 let i = 0
 
 //DECLARAÇÃO DE FUNÇÕES
@@ -17,7 +17,7 @@ function definirTamanhoCarrossel(wTela){
         f = 350
     }
     else{
-        f = 420
+        f = wTela * 0.55
     }
     return f
 }
