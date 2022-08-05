@@ -1,25 +1,28 @@
 //DECLARAÇÃO DE VARIÁVEIS
 
+const carrossel = document.querySelector('.carrossel')
 const imgs = document.getElementById("painel")
 const img = document.querySelectorAll("#painel img")
 const h3Sensor = document.querySelector("#sensores .texto-principal-sensores h3")
 const pSensor = document.querySelector("#sensores .texto-principal-sensores p")
+const textoSensor = document.querySelector('#sensores .texto-principal-sensores')
 let i = 0
 
 //DECLARAÇÃO DE FUNÇÕES
 
 function definirTamanhoCarrossel(wTela){
     let f = 0
-    if(wTela >= 1366){
-        f = 500
-    }
-    else if(wTela >= 1024){
-        f = 350
+    if(wTela < 900){
+        textoSensor.style.display = 'block'
+        carrossel.style.display = 'flex'
+        
+        return wTela * 0.45
     }
     else{
-        f = wTela * 0.55
+        textoSensor.style.display = 'none'
+        carrossel.style.display = 'none'
+        return false
     }
-    return f
 }
 
 console.log(window.innerWidth)

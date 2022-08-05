@@ -222,15 +222,16 @@ main{
     margin-top: 15px;
 }
 
+#sensores .texto-principal-sensores{
+    display: none;
+}
+
 #sensores h3{
     font-size: 34px;
     color: white;
 }
 
 #sensores p{
-    /* margin: 10px; */
-    /* width: 800px; */
-    /* height: 200px; */
     font-size: 18px;
     color: #dfe3ee
 }
@@ -242,6 +243,7 @@ main{
     overflow: hidden;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.39) 1.95px 1.95px 3px;
+    display: none;
 }
 
 #sensores #painel{
@@ -431,9 +433,13 @@ footer{
     }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 901px) {
     *{
         text-align: center;
+    }
+
+    #apresentacao{
+        margin-top: 20px;
     }
     
     #apresentacao img, #sobre img{
@@ -441,7 +447,7 @@ footer{
     }
     
     #apresentacao h2, #sobre h2{
-        font-size: 360%;
+        font-size: 320%;
     }
 
     #apresentacao p, #sobre p{
@@ -456,7 +462,7 @@ footer{
     #apresentacao button{
         width: 40vw;
         height: 10vh;
-        font-size: 130%;
+        font-size: 120%;
         margin-left: 0;
         margin-top: 20px;
     }
@@ -464,18 +470,19 @@ footer{
     /*---------*/
 
     #sensores{
-        margin-top: 20px;
-        height: 78vh;
-        justify-content: space-between;
+        /* margin-top: 140px; */
+        height: 100vh;
+        justify-content: space-evenly;
+        gap: 60px;
         flex-direction: column;
     }
 
     #sensores .bloco{
         display: none;
+        text-align: center;
     }
 
     #sensores .texto-principal-sensores{
-        text-align: center;
     }
 
     #sensores h3{
@@ -486,16 +493,79 @@ footer{
         text-align: center;
         font-size: 165%;
         line-height: 1.4;
-        width: 65vw;
+        width: 340px;
     }
 
     #sensores .carrossel {
-        width: 55vw;
-        height: 55vw;
+        width: 45vw;
+        height: 45vw;
     }
 
     #sobre{
-        height: 80vh;
+        height: 70vh;
         justify-content: center;
+    }
+}
+
+@media screen and (max-width: 561px) {
+    header{
+        justify-content: space-between;
+        padding: 0 10px;
+    }
+
+    header .logo{
+        height: 70px;
+    }
+    
+    header nav{
+        display: none;
+    }
+
+    header .hamburguer{
+        display: flex;
+    }
+    
+    #apresentacao{
+        margin: 0;
+    }
+
+    #apresentacao h2, #sobre h2{
+        font-size: 30px;
+    }
+
+    #apresentacao p{
+        font-size: 20px;
+    }
+
+    #apresentacao p{
+        margin: 15px auto;
+        max-width: 300px;
+        height: auto;
+    }
+
+    #apresentacao button{
+        width: 200px;
+        height: 90px;
+        font-size: 16px;
+    }
+
+    #sensores{
+        gap: 0;
+    }
+
+    #sensores h3{
+        font-size: 28px;
+    }
+
+    #sensores p{
+        font-size: 18px;
+    }
+
+    #sobre{
+        justify-content: space-around;
+    }
+
+    #sobre p{
+        font-size: 18px;
     }
 }
