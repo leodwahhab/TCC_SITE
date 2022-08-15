@@ -11,22 +11,18 @@
 
 body, html{
     max-width: 100%;
-    /* font-family: Barlow, 'sans-serif'; */
     font-family: 'Open Sans', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    background: white;
+    background: black;
     height: 100vh;
     width: 100vw;
     scroll-behavior: smooth;
 }
 
-h2{
-    font-size: 54px;
-    color: white; 
-}
+h2 {font-size: 54px; color: white;}
 
 p{
     font-size: 28px;
@@ -37,6 +33,7 @@ p{
 }
 
 .waves{
+    margin-top: 120px;
     height: 110px;
     width: 100%;
     background-image: url('../img/wave.svg');
@@ -55,10 +52,7 @@ p{
     background-position: bottom center;
 }
 
-::-webkit-scrollbar{
-    width: 20px;
-    background: #3b5998;
-}
+::-webkit-scrollbar {width: 20px; background: #3b5998;}
 
 ::-webkit-scrollbar-thumb{
     border: 5px solid #3b5998;
@@ -69,7 +63,8 @@ p{
 /* -----------------INICIO CONTAINER------------------- */
 
 .container{
-    margin-top: 120px;
+    transition: all 0.2s ease;
+    background-color: white;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -77,13 +72,68 @@ p{
     width: 100%;
 }
 
+/* ---- INICIO SIDEBAR ----- */
+.sidebar{
+    transition: all 0.6s ease-in-out;
+    left: -60vw;
+    padding-top: 15px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: fixed;
+    min-height: 100vh;
+    height: 100vh;
+    width: 60vw;
+    background: #3b5998;;
+    align-self: flex-start;
+    border-top-right-radius: 20px;
+    z-index: 9999;
+    box-shadow: rgba(0, 0, 0, 0.349) 0px 4px 12px;
+}
+
+.sidebar .sidebar-redes{
+    display: flex;
+    height: 70px;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.sidebar-redes a{
+    height: 40px;
+    width: 40px;
+}
+
+.sidebar-redes svg{
+    height: 40px;
+    fill: white;
+}
+
+.sidebar .sidebar-nav{
+    width: 100%;
+    list-style: none;
+    font-size: 20px;
+}
+
+.sidebar .sidebar-nav li{
+    width: 100%;
+    border-bottom: 1px solid whitesmoke;
+    padding: 25px 0;
+}
+
+.sidebar .sidebar-nav a{
+    color: white;
+}
+/* ----- FIM SIDEBAR ----- */
+
 /* ----INICIO HEADER---- */
 header{
     position: fixed;
     display: flex;
     width: 100%;
-    /* height: 80px; */
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     z-index: 999;
     background: white;
@@ -92,46 +142,77 @@ header{
 }
 
 /* inicio navbar */
-header ul{
+header nav ul{
     list-style: none;
     display: flex;
     gap: 20px;
     font-size: 22px;
 }
 
-header ul li, header ul li a{
+header nav ul li, header nav ul li a{
     color: #3b5998;
     transition: all 0.2s ease-in;
 }
 
-header ul li:hover, header li a:hover{
+header nav ul li:hover, header nav li a:hover{
     transform: translateY(-3px);
     color: #8b9dc3;
 }
 
-.hamburguer{
-    display: none;
-    width: 35px;
+header .icones-redes-sociais ul{
+    display: flex;
     height: 35px;
-    background-image: url('../img/menu.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center center;
+    width: max-content;
+    gap: 25px;
+}
+
+header .icones-redes-sociais a svg {
+    transition: all 0.5s ease; 
+    height: 100%; 
+    width: 100%;
+}
+
+header .icones-redes-sociais a svg:hover {cursor: pointer;}
+
+header .icones-redes-sociais a svg:nth-child(1):hover {fill: #3b5998;}
+
+header .icones-redes-sociais a svg:nth-child(2):hover {fill: rgb(214, 169, 176);}
+
+header .icones-redes-sociais a svg:nth-child(3):hover {fill: rgb(0, 124, 124)}
+
+header .menu{
+    display: none;
+    width: 33px;
+    height: 30px;
+    background: none;
     border: none;
+    transition: 0.6s;
+}
+
+header .menu #check{
+    width: 33px;
+    height: 30px;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 99999999999;
+}
+
+.menu .barras{
+    width: 100%;
+    height: 4px;
+    margin: 6px 0;
+    background: #3b5998;
+    border-radius: 20px;
 }
 
 /* fim navbar */
 
-.logo{
-    height: 90px;
-}
+.logo {height: 90px;}
 
 /* -----FIM HEADER----- */
 
-main{
-    width: 100%;
-    background: #3b5998;
-}
+main {width: 100%; background: #3b5998;}
 
 /* ----INICIO SOFTWARE---- */
 #apresentacao{
@@ -146,13 +227,9 @@ main{
 
 /* -texto de apresentação- */
 
-.texto{
-    width: 600px;
-}
+.texto {width: 600px;}
 
-.texto h2{
-    margin-left: -15px;
-}
+.texto h2 {margin-left: -15px;}
 
 .texto button{
     margin-left: 5%;
@@ -177,13 +254,12 @@ main{
 
 /* fim texto de apresentação */
 
-.img-aquario{
-    height: 450px;
-    width: 450px;
-}
+.img-aquario {height: 450px; width: 450px;}
+
 /* ------FIM SOFTWARE------ */
 
 /* ------INICIO SENSORES------ */
+
 #sensores{
     margin: 50px 0;
     width: 100%;
@@ -218,23 +294,13 @@ main{
     margin-bottom: 15px;
 }
 
-#sensores .bloco div{
-    margin-top: 15px;
-}
+#sensores .bloco div {margin-top: 15px;}
 
-#sensores .texto-principal-sensores{
-    display: none;
-}
+#sensores .texto-principal-sensores {display: none;}
 
-#sensores h3{
-    font-size: 34px;
-    color: white;
-}
+#sensores h3 {font-size: 34px; color: white;}
 
-#sensores p{
-    font-size: 18px;
-    color: #dfe3ee
-}
+#sensores p {font-size: 18px; color: #dfe3ee}
 
 /* inicio carrossel */
 #sensores .carrossel{
@@ -246,9 +312,7 @@ main{
     display: none;
 }
 
-#sensores #painel{
-    display: flex;
-}
+#sensores #painel {display: flex;}
 
 #sensores #painel img{
     object-fit: cover;
@@ -261,6 +325,7 @@ main{
 
 
 /* ----INICIO SOBRE---- */
+
 #sobre{
     width: 100%;
     height: 75vh;
@@ -279,21 +344,13 @@ main{
     justify-content:space-between;
 }
 
-#sobre p{
-    line-height: 1.5;
-}
+#sobre p {line-height: 1.5;}
 
-#sobre a{
-    color: #dfe3ee;
-}
+#sobre a {color: #dfe3ee;}
 
-#sobre a:hover{
-    text-decoration: underline;
-}
+#sobre a:hover {text-decoration: underline;}
 
-#sobre img{
-    height: 560px;
-}
+#sobre img {height: 560px;}
 /* ----FIM SOBRE------ */
 
 /* ------------------FIM CONTAINER------------------*/
@@ -304,36 +361,26 @@ footer{
     height: 50px;
     text-align: center;
     padding: 15px 0;
+    background-color: white;
 }
 /* ----FIM FOOTER---- */
 
-/* MEDIA QUERIES */
-@media screen and (max-width: 1366px){    
+/* ---- MEDIA QUERIES ----*/
+@media screen and (max-width: 1366px){  
+
     /* apresentacao */
-    #apresentacao h2, #sobre h2{
-        font-size: 46px;
-    }
 
-    #apresentacao p, #sobre p{
-        font-size: 24px;
-        max-width: 500px;
-    }
+    #apresentacao h2, #sobre h2 {font-size: 46px;}
+
+    #apresentacao p, #sobre p {font-size: 24px; max-width: 500px;}
     
-    #apresentacao button{
-        width: 300px;
-        height: 100px;
-    }
+    #apresentacao button {width: 300px; height: 100px;}
 
-    #apresentacao img{
-        height: 370px;
-        width: 370px;
-    }
+    #apresentacao img {height: 370px; width: 370px;}
 
     /* sensores */
     
-    #sensores .bloco:nth-child(2){
-        padding: 0 1vw;
-    }
+    #sensores .bloco:nth-child(2) {padding: 0 1vw;}
 
     #sensores .bloco img{
         object-fit: cover;
@@ -342,9 +389,7 @@ footer{
         border-radius: 10px;
     }
 
-    #sensores h3{
-        font-size: 30px;
-    }
+    #sensores h3 {font-size: 30px;}
 
     #sensores p{
         margin: 0;
@@ -352,16 +397,11 @@ footer{
         height: 130px;
     }
 
-    #sensores .carrossel {
-        width: 350px;
-        height: 350px;
-    }
+    #sensores .carrossel {width: 350px; height: 350px;}
 
     /* sobre */
 
-    #sobre{
-        padding-top: 60px;
-    }
+    #sobre {padding-top: 60px;}
 
     #sobre img{
         width: 450px;
@@ -372,26 +412,18 @@ footer{
 @media screen and (max-width: 1024px){
     /* apresentacao */
     
-    #apresentacao{
-        justify-content: space-evenly;
-    }
+    #apresentacao {justify-content: space-evenly;}
     
-    #apresentacao .texto{
-        width: 500px;
-    }
+    #apresentacao .texto {width: 500px;}
     
-    #apresentacao h2, #sobre h2{
-        font-size: 38px;
-    }
+    #apresentacao h2, #sobre h2 {font-size: 38px;}
     
     #apresentacao p, #sobre p{
         font-size: 20px;
         max-width: 400px;
     }
     
-    #apresentacao p{
-        margin: 15px 0;
-    }
+    #apresentacao p {margin: 15px 0;}
     
     #apresentacao button{
         width: 300px;
@@ -399,65 +431,38 @@ footer{
         font-size: 20px;
     }
     
-    #apresentacao img{
-        height: 300px;
-        width: 300px;
-    }
+    #apresentacao img {height: 300px; width: 300px;}
     
     /* sensores */
     
-    #sensores{
-        margin: 0;
-    }
+    #sensores {margin: 0;}
 
-    #sensores h3{
-        font-size: 32px;
-    }
+    #sensores h3 {font-size: 32px;}
     
-    #sensores p{
-        font-size: 20px;
-        height: 130px;
-    }
+    #sensores p {font-size: 20px; height: 130px;}
     
     /* sobre */
     
-    #sobre{
-        padding-top: 40px;
-    }
+    #sobre {padding-top: 40px;}
+
     #sobre img{
         width: 360px;
         height: 360px;
     }
-    #sobre a{
-        text-decoration: underline;
-    }
+
+    #sobre a {text-decoration: underline;}
 }
 
 @media screen and (max-width: 901px) {
-    *{
-        text-align: center;
-    }
-
-    #apresentacao{
-        margin-top: 20px;
-    }
+    * {text-align: center;}
     
-    #apresentacao img, #sobre img{
-        display: none;
-    }
+    #apresentacao img, #sobre img {display: none;}
     
-    #apresentacao h2, #sobre h2{
-        font-size: 320%;
-    }
+    #apresentacao h2, #sobre h2 {font-size: 320%;}
 
-    #apresentacao p, #sobre p{
-        font-size: 180%;
-        max-width: unset;
-    }
+    #apresentacao p, #sobre p {font-size: 180%; max-width: unset;}
 
-    #apresentacao p{
-        margin: 20px 0;
-    }
+    #apresentacao p {margin: 20px 0;}
     
     #apresentacao button{
         width: 40vw;
@@ -470,24 +475,15 @@ footer{
     /*---------*/
 
     #sensores{
-        /* margin-top: 140px; */
         height: 100vh;
         justify-content: space-evenly;
         gap: 60px;
         flex-direction: column;
     }
 
-    #sensores .bloco{
-        display: none;
-        text-align: center;
-    }
+    #sensores .bloco {display: none; text-align: center;}
 
-    #sensores .texto-principal-sensores{
-    }
-
-    #sensores h3{
-        font-size: 320%;
-    }
+    #sensores h3 {font-size: 320%;}
 
     #sensores p{
         text-align: center;
@@ -496,46 +492,33 @@ footer{
         width: 340px;
     }
 
-    #sensores .carrossel {
-        width: 45vw;
-        height: 45vw;
-    }
+    #sensores .carrossel {width: 45vw; height: 45vw;}
 
-    #sobre{
-        height: 70vh;
-        justify-content: center;
-    }
+    #sobre {height: 70vh; justify-content: center;}
 }
 
 @media screen and (max-width: 561px) {
+    
+    .waves{margin-top: 70px;}
+    
     header{
-        justify-content: space-between;
+        justify-content: space-around;
         padding: 0 10px;
     }
 
-    header .logo{
-        height: 70px;
-    }
+    header .logo {height: 60px;}
     
-    header nav{
-        display: none;
-    }
+    header nav {display: none;}
 
-    header .hamburguer{
-        display: flex;
-    }
+    header .icones-redes-sociais ul {display: none;}
+
+    header .menu {display: block;}
     
-    #apresentacao{
-        margin: 0;
-    }
+    #apresentacao {margin: 0;}
 
-    #apresentacao h2, #sobre h2{
-        font-size: 30px;
-    }
+    #apresentacao h2, #sobre h2 {font-size: 30px;}
 
-    #apresentacao p{
-        font-size: 20px;
-    }
+    #apresentacao p {font-size: 20px;}
 
     #apresentacao p{
         margin: 15px auto;
@@ -549,23 +532,13 @@ footer{
         font-size: 16px;
     }
 
-    #sensores{
-        gap: 0;
-    }
+    #sensores {gap: 0;}
 
-    #sensores h3{
-        font-size: 28px;
-    }
+    #sensores h3 {font-size: 28px;}
 
-    #sensores p{
-        font-size: 18px;
-    }
+    #sensores p {font-size: 18px;}
 
-    #sobre{
-        justify-content: space-around;
-    }
+    #sobre {justify-content: space-around;}
 
-    #sobre p{
-        font-size: 18px;
-    }
+    #sobre p {font-size: 18px;}
 }
