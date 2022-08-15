@@ -101,15 +101,9 @@ p{
     align-items: center;
 }
 
-.sidebar-redes a{
-    height: 40px;
-    width: 40px;
-}
+.sidebar-redes a {height: 40px; width: 40px;}
 
-.sidebar-redes svg{
-    height: 40px;
-    fill: white;
-}
+.sidebar-redes svg {height: 40px; fill: white;}
 
 .sidebar .sidebar-nav{
     width: 100%;
@@ -123,9 +117,7 @@ p{
     padding: 25px 0;
 }
 
-.sidebar .sidebar-nav a{
-    color: white;
-}
+.sidebar .sidebar-nav a {color: white;}
 /* ----- FIM SIDEBAR ----- */
 
 /* ----INICIO HEADER---- */
@@ -498,6 +490,8 @@ footer{
 }
 
 @media screen and (max-width: 561px) {
+
+    /* header .sidebar {display: flex;} */
     
     .waves{margin-top: 70px;}
     
