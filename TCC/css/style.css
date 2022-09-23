@@ -490,8 +490,6 @@ footer{
 }
 
 @media screen and (max-width: 561px) {
-
-    /* header .sidebar {display: flex;} */
     
     .waves{margin-top: 70px;}
     
