@@ -16,7 +16,7 @@ body, html{
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    background: black;
+    background: white;
     height: 100vh;
     width: 100vw;
     scroll-behavior: smooth;
@@ -43,6 +43,7 @@ p{
 }
 
 .areia{
+    z-index: 999;
     position: sticky;
     bottom: 0;
     width: 100%;
@@ -101,9 +102,9 @@ p{
     align-items: center;
 }
 
-.sidebar-redes a {height: 40px; width: 40px;}
+.sidebar-redes a {height: 32px; width: 40px;}
 
-.sidebar-redes svg {height: 40px; fill: white;}
+.sidebar-redes svg {height: 100%; fill: white;}
 
 .sidebar .sidebar-nav{
     width: 100%;
@@ -122,6 +123,7 @@ p{
 
 /* ----INICIO HEADER---- */
 header{
+    float: left;
     position: fixed;
     display: flex;
     width: 100%;
@@ -207,7 +209,7 @@ header .menu #check{
 main {width: 100%; background: #3b5998;}
 
 /* ----INICIO SOFTWARE---- */
-#apresentacao{
+#apresentacao, #manual{
     margin-top: -20px;
     width: 100%;
     height: 70vh;
@@ -235,6 +237,14 @@ main {width: 100%; background: #3b5998;}
     line-height: 1.4;
     transition: 0.4s all ease-in-out;
     color: #3b5998;
+}
+
+.texto a{
+    color: grey;
+}
+
+.texto a:hover{
+    text-decoration: underline;
 }
 
 .texto button:hover{
@@ -345,6 +355,72 @@ main {width: 100%; background: #3b5998;}
 #sobre img {height: 560px;}
 /* ----FIM SOBRE------ */
 
+.suporte #faq ul{
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.suporte #faq li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 25px;
+    list-style: none;
+    transition: 0.2s all ease;
+}
+
+ .suporte #faq li:hover{
+    cursor: pointer;
+    transform: translateY(-5px);
+}
+
+.suporte .pergunta{
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    background-color:rgb(221, 221, 221);
+    width: 100%;
+    padding: 20px 15px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 30px;
+    z-index: 99;
+    float: left;
+}
+
+#faq svg{
+    height: 30px;
+    width: 30px;
+    border: none;
+}
+
+.suporte .descricao{
+    font-size: 20px;
+    max-width: 69vw;
+    background-color:rgb(235, 235, 235);
+    max-height: 0px;
+    width: 90vw;
+    overflow: hidden;
+    transition: 0.6s max-height ease-out;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#faq{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 250px;
+}
+ 
+
 /* ------------------FIM CONTAINER------------------*/
 
 /* ----INICIO FOOTER---- */
@@ -362,13 +438,13 @@ footer{
 
     /* apresentacao */
 
-    #apresentacao h2, #sobre h2 {font-size: 46px;}
+    #apresentacao h2, #manual h2, #sobre h2 {font-size: 46px;}
 
-    #apresentacao p, #sobre p {font-size: 24px; max-width: 500px;}
+    #apresentacao p, #manual p, #sobre p {font-size: 24px; max-width: 500px;}
     
     #apresentacao button {width: 300px; height: 100px;}
 
-    #apresentacao img {height: 370px; width: 370px;}
+    #apresentacao img, #manual img {height: 370px; width: 370px;}
 
     /* sensores */
     
@@ -404,26 +480,26 @@ footer{
 @media screen and (max-width: 1024px){
     /* apresentacao */
     
-    #apresentacao {justify-content: space-evenly;}
+    #apresentacao, #manual {justify-content: space-evenly;}
     
-    #apresentacao .texto {width: 500px;}
+    #apresentacao .texto, #manual .texto {width: 500px;}
     
-    #apresentacao h2, #sobre h2 {font-size: 38px;}
+    #apresentacao h2, #manual h2, #sobre h2 {font-size: 38px;}
     
-    #apresentacao p, #sobre p{
+    #apresentacao p, #manual p, #sobre p{
         font-size: 20px;
         max-width: 400px;
     }
     
-    #apresentacao p {margin: 15px 0;}
+    #apresentacao p, #manual p {margin: 15px 0;}
     
-    #apresentacao button{
+    #apresentacao button, #manual button{
         width: 300px;
         height: 90px;
         font-size: 20px;
     }
     
-    #apresentacao img {height: 300px; width: 300px;}
+    #apresentacao img, #manual img {height: 300px; width: 300px;}
     
     /* sensores */
     
@@ -448,15 +524,13 @@ footer{
 @media screen and (max-width: 901px) {
     * {text-align: center;}
     
-    #apresentacao img, #sobre img {display: none;}
+    #apresentacao img, #manual img, #sobre img {display: none;}
     
-    #apresentacao h2, #sobre h2 {font-size: 320%;}
+    #apresentacao h2, #manual h2, #sobre h2 {font-size: 320%;}
 
-    #apresentacao p, #sobre p {font-size: 180%; max-width: unset;}
-
-    #apresentacao p {margin: 20px 0;}
+    #apresentacao p, #manual p, #sobre p {font-size: 180%; max-width: unset; margin: 20px 0;}
     
-    #apresentacao button{
+    #apresentacao button, #manual button{
         width: 40vw;
         height: 10vh;
         font-size: 120%;
@@ -480,11 +554,11 @@ footer{
     #sensores p{
         text-align: center;
         font-size: 165%;
-        line-height: 1.4;
-        width: 340px;
+        line-height: 1.2;
+        width: 600px;
     }
 
-    #sensores .carrossel {width: 45vw; height: 45vw;}
+    #sensores .carrossel {width: 35vw; height: 35vw;}
 
     #sobre {height: 70vh; justify-content: center;}
 }
@@ -506,19 +580,19 @@ footer{
 
     header .menu {display: block;}
     
-    #apresentacao {margin: 0;}
+    #apresentacao, #manual {margin: 0;}
 
-    #apresentacao h2, #sobre h2 {font-size: 30px;}
+    #apresentacao h2, #manual h2, #sobre h2, #faq h2 {font-size: 30px;}
 
-    #apresentacao p {font-size: 20px;}
+    #apresentacao p, #manual p {font-size: 20px;}
 
-    #apresentacao p{
+    #apresentacao p, #manual p{
         margin: 15px auto;
         max-width: 300px;
         height: auto;
     }
 
-    #apresentacao button{
+    #apresentacao button, #manual button{
         width: 200px;
         height: 90px;
         font-size: 16px;
@@ -528,9 +602,13 @@ footer{
 
     #sensores h3 {font-size: 28px;}
 
-    #sensores p {font-size: 18px;}
+    #sensores p {font-size: 18px; width: 340px;}
 
     #sobre {justify-content: space-around;}
 
     #sobre p {font-size: 18px;}
+
+    #faq .pergunta{
+        font-size: 24px;
+    }
 }

@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-<body onresize="definirTamanhoCarrossel(window.innerWidth)">
+<body class="suporte">
 
     <!------- INICIO SIDEBAR ------->
     <div class="sidebar">
@@ -48,26 +48,17 @@
         </ul>
         <ul class="sidebar-nav">
             <li>
-                <a href="#">Software</a>
-            </li>
-            <li>
-                <a href="#sensores">Sensores</a>
-            </li>
-            <li>
-                <a href="#sobre">Sobre</a>
+                <a href="#sobre">Página inicial</a>
             </li>
         </ul>
     </div>
     <!------- FIM SIDEBAR ------->
-
-    <!-- INICIO HEADER -->
-    <!-- FIM HEADER -->
     
     <!-- INICIO CONTAINER -->
     <div class="container">
         <header>
             <h2>
-                <a href="#">
+                <a href="index.html">
                     <img src="img/Allfishes.png" alt="" class="logo">
                 </a>
             </h2>
@@ -75,13 +66,7 @@
             <nav>
                 <ul>
                     <li>
-                        <a href="#">Software</a>
-                    </li>
-                    <li>
-                        <a href="#sensores">Sensores</a>
-                    </li>
-                    <li>
-                        <a href="#sobre">Sobre</a>
+                        <a href="index.html">Página inicial</a>
                     </li>
                 </ul>
             </nav>
@@ -121,68 +106,29 @@
                 <div id="barra3" class="barras"></div>
             </div>
         </header>
-        
         <div class="waves"></div>
-
+        
         <!-- INICIO MAIN -->
         <main>
-            <section id="apresentacao">
+            <section id="manual">
                 <div class="texto">
-                    <h2>AllFishes Software</h2>
-                    <p>O sistema do aquário inteligente trabalha com o auxílio de 3 sensores junto com um aplicativo mobile, assim auxiliando você, dono de aquário a controlar os níveis de pH, TDS e temperatura.
-                    </p>
-                </div>
-                <img src="img/Fish bowl-cuate.png" class="img-aquario" alt="">
-            </section>
-
-            <section id="sensores">
-
-                <div class="bloco esp32">
-                    <div>
-                        <h3>ESP32</h3>
-                        <p>&nbsp&nbsp&nbsp&nbsp O módulo ESP32 é um módulo de alta performance para aplicações envolvendo wifi, contando com um baixíssimo consumo de energia.</p>
-                    </div>
-                    <img src="https://www.filipeflop.com/wp-content/uploads/2017/11/6WL55_1.jpg" alt="">
-                </div>
-                <div class="bloco tds">
-                    <div>
-                        <h3>Sensor TDS</h3>
-                        <p>&nbsp&nbsp&nbsp&nbspO sensor de TDS é um equipamento amplamente utilizado para medir o valor TDS.</p>
-                    </div>
-                    <img src="https://imgaz.staticbg.com/thumb/large/oaupload/ser1/banggood/images/8E/91/a816f87c-8a85-4a5b-afd4-9bccf6283c74.JPG" alt="">
-                </div>
-                <div class="bloco ph">
-                    <div>
-                        <h3>Sensor PH</h3>
-                        <p>&nbsp&nbsp&nbsp&nbspO Sensor de pH Arduino é um sensor muito funcional e prático desenvolvido especialmente para trabalhar em conjunto com microcontroladores, podendo atuar em inclusive com o Arduino UNO.</p>
-                    </div>
-                    <img src="https://a-static.mlcdn.com.br/1500x1500/sensor-de-ph-arduino-modulo-de-leitura/rmsrobotica/7526187543/cf80ee19b6979e296cd679e842e268eb.jpg" alt="">
-                </div>
-
-                <div class="texto-principal-sensores">
-                    <h3>Sensor TDS</h3>
-                    <p>&nbsp&nbsp&nbsp&nbspO sensor de TDS é um equipamento amplamente utilizado para medir o valor TDS.</p>
-                </div>
-
-                <div class="carrossel">
-                    <div id="painel">
-                        <img src="https://imgaz.staticbg.com/thumb/large/oaupload/ser1/banggood/images/8E/91/a816f87c-8a85-4a5b-afd4-9bccf6283c74.JPG" alt="">
-                        <img src="https://a-static.mlcdn.com.br/1500x1500/sensor-de-ph-arduino-modulo-de-leitura/rmsrobotica/7526187543/cf80ee19b6979e296cd679e842e268eb.jpg" alt="">
-                        <img src="https://www.filipeflop.com/wp-content/uploads/2017/11/6WL55_1.jpg" alt="">
-                    </div>
-                </div>
-            </section>
-
-            <section id="sobre">
-                <h2>Sobre</h2>
-                <div>
-                    <img src="img/Shared workspace-pana.png" alt="">
+                    <h2>Manual do Usuario</h2>
                     <p>
-                        &nbsp&nbsp&nbsp&nbsp O fundamento do nosso grupo é auxiliar os donos de aquário a controlar os níveis de pH, TDS e temperatura citados acima pois este processo, se feito manualmente, demanda um certo conhecimento na área e não é prático, podendo até mesmo prejudicar a saúde do seu peixe, porque se o usuário não obter muito conhecimento pode acabar fazendo esse procedimento de forma errada e matando o animal.
-                        <br>
+                        O manual de usuário é um documento que tem por objetivo principal ajudar os utilizadores a entender como um produto funciona e como utilizá-lo. <br>
+                        <a href="Manual do Usuario.pdf" download="manual-do-arquivo">Clique aqui</a> para fazer o download do manual do usuário.
                     </p>
+                    <p>
+                        
+                    </p>
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M344 240h-56L287.1 152c0-13.25-10.75-24-24-24h-16C234.7 128 223.1 138.8 223.1 152L224 240h-56c-9.531 0-18.16 5.656-22 14.38C142.2 263.1 143.9 273.3 150.4 280.3l88.75 96C243.7 381.2 250.1 384 256.8 384c7.781-.3125 13.25-2.875 17.75-7.844l87.25-96c6.406-7.031 8.031-17.19 4.188-25.88S353.5 240 344 240zM256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 464c-114.7 0-208-93.31-208-208S141.3 48 256 48s208 93.31 208 208S370.7 464 256 464z"/></svg> -->
                 </div>
+                <img src="img/Instruction manual-pana.png" class="img-aquario" alt="">
+            </section>
 
+            <section id="faq">
+                <h2>Perguntas Frequentes</h2>
+                <ul>
+                </ul>
             </section>
 
             <div class="areia"></div>
@@ -197,7 +143,7 @@
         AllFishes (TCC) - Etec SEBRAE &copy 2022
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="js/suporte.js"></script>
     <script src="js/sidebar.js"></script>
 </body>
 </html>

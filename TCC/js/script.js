@@ -1,4 +1,4 @@
-//DECLARAÇÃO DE VARIÁVEIS
+//DECLARAÇÃO E ATRIBUIÇÃO DE VARIÁVEIS
 
 const carrossel = document.querySelector('.carrossel')
 const imgs = document.getElementById("painel")
@@ -10,13 +10,13 @@ let i = 0
 
 //DECLARAÇÃO DE FUNÇÕES
 
+// ajusta o tamanho do carrossel de acordo com a largura da tela
 function definirTamanhoCarrossel(wTela){
-    let f = 0
-    if(wTela < 900){
+    if(wTela < 901){
         textoSensor.style.display = 'block'
         carrossel.style.display = 'flex'
         
-        return wTela * 0.45
+        return wTela * 0.35
     }
     else{
         textoSensor.style.display = 'none'
@@ -25,9 +25,7 @@ function definirTamanhoCarrossel(wTela){
     }
 }
 
-console.log(window.innerWidth)
-console.log(definirTamanhoCarrossel(window.innerWidth))
-
+//move as imagens do carrossel
 function moverCarrossel(){
     i++
     switch(i){
@@ -36,8 +34,8 @@ function moverCarrossel(){
             pSensor.innerHTML = '&nbsp&nbsp&nbsp&nbspO Sensor de pH Arduino é um sensor muito funcional e prático desenvolvido especialmente para trabalhar em conjunto com microcontroladores, podendo atuar em inclusive com o Arduino UNO.'
             break
         case 2:
-            h3Sensor.innerHTML = 'Arduino UNO'
-            pSensor.innerHTML = '&nbsp&nbsp&nbsp&nbspArduino UNO é a placa mais recomendada para quem está começando na plataforma. Ela possui excelente custo-benefício, quantidade de portas suficiente para a criação de protótipos com sensores e módulos conectados.'
+            h3Sensor.innerHTML = 'ESP32'
+            pSensor.innerHTML = '&nbsp&nbsp&nbsp&nbspO módulo ESP32 é um módulo de alta performance para aplicações envolvendo wifi, contando com um baixíssimo consumo de energia.'
             break
         case 3:
             i = 0
@@ -50,31 +48,15 @@ function moverCarrossel(){
     imgs.style.transform = "translateX(" + -i*(definirTamanhoCarrossel(window.innerWidth)) + "px)"
 }
 
+// intervalo para a função de mover o carrossel acontecer
 setInterval(moverCarrossel, 4000)
 
+//cria uma sombra no header quando a tela é scrollada para baixa
 window.onscroll = function(){
     if(document.body.scrollTop > 35 || document.documentElement.scrollTop > 35){
         document.querySelector('header').style.boxShadow = '0px 0px 15px 3px #00000090'
     }
     else{
         document.querySelector('header').style.boxShadow = 'none'
-    }
-}
-
-function animarMenu(){
-    let container = document.querySelector('.container')
-    let checkbox = document.getElementById('check')
-    let menu = document.getElementById('menu')
-    let sidebar = document.querySelector('.sidebar')
-    
-    if(checkbox.checked){
-        container.style.opacity = '0.8'
-        sidebar.style.left = '0vw';
-        menu.style.transform = 'rotate(90deg)'
-    }
-    else{
-        sidebar.style.left = '-60vw';
-        container.style.opacity = '1'
-        menu.style.transform = 'rotate(0deg)'
     }
 }
