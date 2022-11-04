@@ -11,7 +11,7 @@ window.onscroll = function(){
 const faq = [
     ['Como posso instalar o aplicativo?', 'Por enquanto o nosso aplicativo Allfishes funciona somente para fins acadêmicos, mas no futuro ele estará disponível na PlayStore.'],
     ['Como posso comprar um sistema com os sensores?', 'Por enquanto nosso sistema foi desenvolvido sem finalidades comercias então para o cliente adquirir deverá nós avisar e agendar um pedido à longo prazo.'],
-    ['Quem são os responáveis pelo trabalho?', 'Coloca o nome de todos os integrantes.'],
+    ['Quem são os responáveis pelo trabalho?', 'Alex Cruz, Kaliq Aboarrage, Leonardo Wahhab, Luan Juvêncio, Paulo Santana, Pedro Henrique e Vinícius Brait.'],
     ['Como posso entrar em contato com a empresa?', 'Você pode enviar um e-mail para allfishestcc@gmail.com que  assim que possível iremos responder você.'],        
     ['O sistema fornece algum tipo de garantia?', 'Como ele ainda só foi desenvolvido para fins acadêmimos, nós não fornecemos nenhum tipo de garantia.']
 ]
