@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap');
-
 /* CONFIGURAÇÕES GERAIS */
 
 *{
@@ -143,15 +141,9 @@ header nav ul{
     font-size: 22px;
 }
 
-header nav ul li, header nav ul li a{
-    color: #3b5998;
-    transition: all 0.2s ease-in;
-}
+header nav ul li, header nav ul li a {color: #3b5998; transition: all 0.2s ease-in;}
 
-header nav ul li:hover, header nav li a:hover{
-    transform: translateY(-3px);
-    color: #8b9dc3;
-}
+header nav ul li:hover, header nav li a:hover {transform: translateY(-3px); color: #8b9dc3;}
 
 header .icones-redes-sociais ul{
     display: flex;
@@ -239,13 +231,9 @@ main {width: 100%; background: #3b5998;}
     color: #3b5998;
 }
 
-.texto a{
-    color: grey;
-}
+.texto a {color: grey;}
 
-.texto a:hover{
-    text-decoration: underline;
-}
+.texto a:hover {text-decoration: underline;}
 
 .texto button:hover{
     border: 3px solid #fff;
@@ -353,6 +341,7 @@ main {width: 100%; background: #3b5998;}
 #sobre a:hover {text-decoration: underline;}
 
 #sobre img {height: 560px;}
+
 /* ----FIM SOBRE------ */
 
 .suporte #faq ul{
@@ -360,7 +349,6 @@ main {width: 100%; background: #3b5998;}
     display: flex;
     flex-direction: column;
     align-items: center;
-    
 }
 
 .suporte #faq li{
@@ -373,15 +361,13 @@ main {width: 100%; background: #3b5998;}
     transition: 0.2s all ease;
 }
 
- .suporte #faq li:hover{
-    cursor: pointer;
-    transform: translateY(-5px);
-}
+.suporte #faq li:hover {cursor: pointer; transform: translateY(-5px);}
 
 .suporte .pergunta{
+    font-weight: 600;
     border-radius: 10px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-    background-color:rgb(221, 221, 221);
+    background-color:rgb(209, 209, 209);
     width: 100%;
     padding: 20px 15px;
     height: auto;
@@ -393,33 +379,33 @@ main {width: 100%; background: #3b5998;}
     float: left;
 }
 
-#faq svg{
-    height: 30px;
-    width: 30px;
-    border: none;
-}
-
-.suporte .descricao{
-    font-size: 20px;
-    max-width: 69vw;
-    background-color:rgb(235, 235, 235);
-    max-height: 0px;
-    width: 90vw;
-    overflow: hidden;
-    transition: 0.6s max-height ease-out;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-}
-
 #faq{
+    padding-top: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    margin-bottom: 250px;
+    margin-bottom: 100px;
 }
- 
+
+#faq svg{
+    height: 30px;
+    width: 30px;
+    border: none;
+    transition: all 0.3s ease-out;
+}
+
+.suporte .resposta{
+    font-size: 20px;
+    background-color:rgb(235, 235, 235);
+    max-height: 0px;
+    width: 98%;
+    overflow: hidden;
+    transition: 0.6s max-height ease-out;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
 
 /* ------------------FIM CONTAINER------------------*/
 
@@ -465,16 +451,11 @@ footer{
         height: 130px;
     }
 
-    #sensores .carrossel {width: 350px; height: 350px;}
-
     /* sobre */
 
     #sobre {padding-top: 60px;}
 
-    #sobre img{
-        width: 450px;
-        height: 450px;
-    }
+    #sobre img {width: 450px; height: 450px;}
 }
 
 @media screen and (max-width: 1024px){
@@ -486,10 +467,7 @@ footer{
     
     #apresentacao h2, #manual h2, #sobre h2 {font-size: 38px;}
     
-    #apresentacao p, #manual p, #sobre p{
-        font-size: 20px;
-        max-width: 400px;
-    }
+    #apresentacao p, #manual p, #sobre p {font-size: 20px; max-width: 400px;}
     
     #apresentacao p, #manual p {margin: 15px 0;}
     
@@ -513,10 +491,7 @@ footer{
     
     #sobre {padding-top: 40px;}
 
-    #sobre img{
-        width: 360px;
-        height: 360px;
-    }
+    #sobre img {width: 360px; height: 360px;}
 
     #sobre a {text-decoration: underline;}
 }
@@ -558,13 +533,12 @@ footer{
         width: 600px;
     }
 
-    #sensores .carrossel {width: 35vw; height: 35vw;}
+    #sensores .carrossel {width: 50vw; height: 50vw;}
 
     #sobre {height: 70vh; justify-content: center;}
 }
 
-@media screen and (max-width: 561px) {
-    
+@media screen and (max-width: 561px){
     .waves{margin-top: 70px;}
     
     header{
@@ -579,6 +553,20 @@ footer{
     header .icones-redes-sociais ul {display: none;}
 
     header .menu {display: block;}
+
+    #faq .pergunta{
+        font-size: 16px;
+    }
+
+    #faq .resposta{
+        font-size: 15px;
+        width: 98%;
+        margin-top: -5px;
+    }
+}
+
+
+@media screen and (max-width: 561px) {
     
     #apresentacao, #manual {margin: 0;}
 
@@ -607,8 +595,128 @@ footer{
     #sobre {justify-content: space-around;}
 
     #sobre p {font-size: 18px;}
+}
+
+@media screen and (max-height: 600px){
+    header {height: 50px;}
+
+    header .logo {height: 50px; margin-top: 12px;}
+
+    header nav a {font-size: 14px;}
+
+    header .icones-redes-sociais ul {align-items: center; gap: 16px}
+
+    header .icones-redes-sociais a {height: 20px; width: 20px;}
+
+
+    .waves{
+        background-image: url('../img/lilwave.svg'); 
+        margin-top: 40px;
+        height: 50px; 
+    }
+
+    #apresentacao {padding-bottom: 0;}
+
+    #apresentacao h2, #manual h2, #sobre h2, #faq h2 {font-size: 20px;}
+
+    #sensores {
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 20px;
+        width: 100%; 
+    }
+
+    #sensores .bloco{
+        width: 150px;
+        height: auto;
+        max-height: auto;
+    }
+
+    #sensores h3 {font-size: 18px;}
+
+    #sensores .bloco:nth-child(2){
+        padding: 0 60px;
+    }
+
+    #sensores .bloco img{
+        width: 120px;
+        height: 120px;
+    }
+
+    #sensores p{
+        width: 150px;
+        font-size: 14px;
+    }
+
+    #sensores .carrossel, .texto-principal-sensores {display: none !important;}
+
+
+    #sensores .bloco {display: flex;}
+
+    #apresentacao{margin-top: 0px;}
+
+    #manual{margin-top: 20px;}
+
+    .texto{
+        width: 250px !important;
+    }
+
+    .texto p{
+        font-size: 14px !important;
+    }
+
+    #sobre{
+        margin-bottom: 20px;
+    }
+
+    #sobre div{
+        justify-content: space-evenly;
+    }
+
+    #sobre p{
+        font-size: 12px;
+        max-width: 250px;
+    }
+
+    #sobre img{
+        display: block;
+        height: 250px;
+        width: 250px
+    }
+
+    #manual img, #apresentacao img{
+        display: block;
+        height: 200px;
+        width: 200px
+    }
+
+    #faq {
+        padding-top: 60px;
+    }
+
+    #faq li{
+        margin-top: 20px !important;
+    }
 
     #faq .pergunta{
-        font-size: 24px;
+        font-size: 14px;
+        padding: 15px;
+    }
+    #faq .resposta{
+        font-size: 12px;
+    }
+
+    #faq svg{
+        height: 20px;
+    }
+
+    .areia {
+        height: 30px;
+    }
+
+    footer{
+        height: 20px;
+        font-size: 14px;
+        padding: 5px 0;
     }
 }

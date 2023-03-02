@@ -1,18 +1,20 @@
 //cria uma animação para a sidebar
-function animarMenu(){
-    let container = document.querySelector('.container')
-    let checkbox = document.getElementById('check')
-    let menu = document.getElementById('menu')
-    let sidebar = document.querySelector('.sidebar')
-    
+const container = document.querySelector('.container')
+const checkbox = document.getElementById('check')
+const menu = document.getElementById('menu')
+const sidebar = document.querySelector('.sidebar')
+let sidebar_aberto = false
+
+container.addEventListener('click', function(){
     if(checkbox.checked){
         container.style.opacity = '0.8'
         sidebar.style.left = '0vw';
         menu.style.transform = 'rotate(90deg)'
+        checkbox.checked = false
     }
     else{
         sidebar.style.left = '-60vw';
         container.style.opacity = '1'
         menu.style.transform = 'rotate(0deg)'
     }
-}
+})

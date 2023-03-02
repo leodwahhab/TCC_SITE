@@ -16,7 +16,7 @@ function definirTamanhoCarrossel(wTela){
         textoSensor.style.display = 'block'
         carrossel.style.display = 'flex'
         
-        return wTela * 0.35
+        return wTela * 0.5
     }
     else{
         textoSensor.style.display = 'none'
@@ -50,13 +50,3 @@ function moverCarrossel(){
 
 // intervalo para a função de mover o carrossel acontecer
 setInterval(moverCarrossel, 4000)
-
-//cria uma sombra no header quando a tela é scrollada para baixa
-window.onscroll = function(){
-    if(document.body.scrollTop > 35 || document.documentElement.scrollTop > 35){
-        document.querySelector('header').style.boxShadow = '0px 0px 15px 3px #00000090'
-    }
-    else{
-        document.querySelector('header').style.boxShadow = 'none'
-    }
-}
