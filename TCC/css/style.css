@@ -539,12 +539,9 @@ footer{
 }
 
 @media screen and (max-width: 561px){
-    .waves{margin-top: 70px;}
+    .waves {margin-top: 70px;}
     
-    header{
-        justify-content: space-around;
-        padding: 0 10px;
-    }
+    header {justify-content: space-around; padding: 0 10px;}
 
     header .logo {height: 60px;}
     
@@ -554,9 +551,7 @@ footer{
 
     header .menu {display: block;}
 
-    #faq .pergunta{
-        font-size: 16px;
-    }
+    #faq .pergunta {font-size: 16px;}
 
     #faq .resposta{
         font-size: 15px;
@@ -579,46 +574,49 @@ footer{
         max-width: 300px;
         height: auto;
     }
-
+    
     #apresentacao button, #manual button{
         width: 200px;
         height: 90px;
         font-size: 16px;
     }
-
+    
     #sensores {gap: 0;}
-
+    
     #sensores h3 {font-size: 28px;}
-
+    
     #sensores p {font-size: 18px; width: 340px;}
 
     #sobre {justify-content: space-around;}
-
+    
     #sobre p {font-size: 18px;}
 }
 
 @media screen and (max-height: 600px){
     header {height: 50px;}
-
+    
     header .logo {height: 50px; margin-top: 12px;}
-
+    
     header nav a {font-size: 14px;}
-
+    
     header .icones-redes-sociais ul {align-items: center; gap: 16px}
-
+    
     header .icones-redes-sociais a {height: 20px; width: 20px;}
-
-
+    
     .waves{
         background-image: url('../img/lilwave.svg'); 
         margin-top: 40px;
         height: 50px; 
     }
-
-    #apresentacao {padding-bottom: 0;}
-
+    
+    #apresentacao {padding-bottom: 0; margin-top: 0px;}
+    
     #apresentacao h2, #manual h2, #sobre h2, #faq h2 {font-size: 20px;}
-
+    
+    .texto {width: 250px !important;}
+    
+    .texto p {font-size: 14px !important;}
+    
     #sensores {
         flex-direction: row;
         justify-content: space-evenly;
@@ -634,49 +632,23 @@ footer{
 
     #sensores h3 {font-size: 18px;}
 
-    #sensores .bloco:nth-child(2){
-        padding: 0 60px;
-    }
+    #sensores .bloco:nth-child(2) {padding: 0 60px;}
 
-    #sensores .bloco img{
-        width: 120px;
-        height: 120px;
-    }
+    #sensores .bloco img {width: 120px; height: 120px;}
 
-    #sensores p{
-        width: 150px;
-        font-size: 14px;
-    }
+    #sensores p {width: 150px; font-size: 14px;}
 
     #sensores .carrossel, .texto-principal-sensores {display: none !important;}
 
-
     #sensores .bloco {display: flex;}
 
-    #apresentacao{margin-top: 0px;}
+    #manual {margin-top: 20px;}
 
-    #manual{margin-top: 20px;}
+    #sobre {margin-bottom: 20px;}
 
-    .texto{
-        width: 250px !important;
-    }
+    #sobre div {justify-content: space-evenly;}
 
-    .texto p{
-        font-size: 14px !important;
-    }
-
-    #sobre{
-        margin-bottom: 20px;
-    }
-
-    #sobre div{
-        justify-content: space-evenly;
-    }
-
-    #sobre p{
-        font-size: 12px;
-        max-width: 250px;
-    }
+    #sobre p {font-size: 12px; max-width: 250px;}
 
     #sobre img{
         display: block;
@@ -690,29 +662,17 @@ footer{
         width: 200px
     }
 
-    #faq {
-        padding-top: 60px;
-    }
+    #faq {padding-top: 60px;}
 
-    #faq li{
-        margin-top: 20px !important;
-    }
+    #faq li {margin-top: 20px !important;}
 
-    #faq .pergunta{
-        font-size: 14px;
-        padding: 15px;
-    }
-    #faq .resposta{
-        font-size: 12px;
-    }
+    #faq .pergunta {font-size: 14px; padding: 15px;}
 
-    #faq svg{
-        height: 20px;
-    }
+    #faq .resposta {font-size: 12px;}
 
-    .areia {
-        height: 30px;
-    }
+    #faq svg {height: 20px;}
+
+    .areia {height: 30px;}
 
     footer{
         height: 20px;
