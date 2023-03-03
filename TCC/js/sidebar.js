@@ -3,7 +3,6 @@ const container = document.querySelector('.container')
 const checkbox = document.getElementById('check')
 const menu = document.getElementById('menu')
 const sidebar = document.querySelector('.sidebar')
-let sidebar_aberto = false
 
 container.addEventListener('click', function(){
     if(checkbox.checked){
