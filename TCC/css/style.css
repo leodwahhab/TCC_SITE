@@ -181,7 +181,7 @@ header .menu #check{
     position: absolute;
     opacity: 0;
     cursor: pointer;
-    z-index: 99999999999;
+    z-index: 999;
 }
 
 .menu .barras{
